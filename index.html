@@ -44,20 +44,20 @@
 
             { id: 9, mid: -2, fid: -3, name: "Кузнецов Александр Викторович", lived: "", img: "", gender: 'male' },
             { id: 11, mid: 25, fid: 17, name: "Грабовский Владимир Григорьевич", lived: "1.11.1955-23.05.2019", gender: 'male' },
-            { id: 12, mid: 16, name: "Грабовский Ярослав", gender: 'male' },
+            { id: 12, fid: 67, mid: 16, name: "Грабовский Ярослав Михайлович", lived: "07.02.2010", gender: 'male' },
             { id: 13, mid: 15, fid: 10, name: "Грабовская Евгения Кирилловна", gender: 'female' },
             { id: 14, mid: 15, fid: 10, name: "Грабовская Мария Кирилловна", gender: 'female' },
             { id: 15, pids: [10], name: "Катя", gender: 'female' },
-            { id: 16, fid: 11, name: "Грабовская Юлия Владимировна", gender: 'female' },
+            { id: 16, fid: 11, pids: [67], name: "Грабовская Вера Владимировна", gender: 'female' },
             { id: 17, mid: 24, fid: 21, pids: [25, 26], name: "Грабовский Григорий Васильевич", lived: "30.04.1930-2.09.2004", gender: 'male' },
             { id: 19, pids: [18], name: "Цветков Михаил Петрович", lived: "1926-1981", gender: 'male' },
             { id: 20, mid: 18, fid: 19, pids: [-33], name: "Цветков Михаил Михайлович", lived: "", gender: 'male' },
             { id: 21, fid: -32, pids: [24], name: "Грабовский Василий Макарович", lived: "", gender: 'male' },
             { id: 22, mid: 24, fid: 21, name: "Грабовский Сергей Васильевич", lived: "", gender: 'male' },
             { id: 23, mid: 24, fid: 21, name: "Грабовский Борис Васильевич", lived: "", gender: 'male' },
-            { id: 24, pids: [21], name: "Грабовская Параскева", lived: "", gender: 'female' },
+            { id: 24, pids: [21], name: "Грабовская Параскева Петровна", lived: "1906-1972", gender: 'female' },
             { id: 25, mid: 29, fid: 28, pids: [17], name: "Грабовская (Глидек) Вера Карловна", lived: "17.12.1933-17.02.1972", gender: 'female' },
-            { id: 26, pids: [17], name: "Грабовская (Белая) Неонила Петровна", lived: "род. 07.12.1945 или 01.01.1944", gender: 'female' },
+            { id: 26, mid: 65, fid: 66, pids: [17], name: "Грабовская (Заяц) Неонила Петровна", lived: "род. 07.12.1945 или 01.01.1944", gender: 'female' },
             { id: 27, mid: 26, name: "Михеева (Белая) Инна", lived: "", gender: 'female' },
             { id: 28, pids: [29], name: "Глидек Карл Карлович", lived: "", gender: 'male' },
             { id: 29, pids: [28], name: "София", lived: "", gender: 'female' },
@@ -84,7 +84,6 @@
             { id: 42, mid: 36, fid: 37, name: "Воробьев Алексей Васильевич", lived: "1924?-1942?", gender: 'male', commen: "Не женат, детей нет" },
             { id: 43, mid: 36, fid: 37, pids: [62, 64], name: "Воробьев Иван Васильевич", lived: "05.05.1930-?", gender: 'male' },
             { id: 18, mid: 36, fid: 37, pids: [19], name: "Цветкова (Воробьева) Лидия Васильевна", lived: "05.01.1930-май 2001", gender: 'female' },
-
             { id: 44, pids: [38], name: "Трефильев Василий Михайлович", lived: "1913-197?", gender: 'male' },
             { id: 45, mid: 38, fid: 44, name: "Трефильев Юрий Васильевич", lived: "1940-?", gender: 'male', comment: "Женат, есть трое детей" },
             { id: 46, mid: 39, fid: 47, pids: [48], name: "Воробьев Владимир Анатольевич", lived: "", gender: 'male' },
@@ -106,6 +105,10 @@
             { id: 62, pids: [43], name: "Воробьева Зоя Ивановна", lived: "1929-?", gender: 'female', comment: "" },
             { id: 63, mid: 62, fid: 43, name: "Воробьев Владимир Иванович", lived: "до 1954-?", gender: 'male', comment: "" },
             { id: 64, pids: [43], name: "Воробьева Анна Ивановна", lived: "1930-?", gender: 'female', comment: "" },
+            { id: 65, pids: [66], name: "Заяц (Беленко) Анна Николаевна", lived: "1909-27.09.2003", gender: 'female', comment: "" },
+            { id: 66, pids: [65], name: "Заяц Пётр Иванович", lived: "1913-04.08.1996", gender: 'male', comment: "" },
+            { id: 67, pids: [16], name: "Басурин Михаил", lived: "", gender: 'male', comment: "" },
+            { id: 68, fid: 67, mid: 16, name: "Грабовская Яна Михайловна", lived: "05.01.2022", gender: 'female' },
         ]);
         chart.maximize(22);
     </script>
