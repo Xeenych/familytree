@@ -43,12 +43,12 @@
             { id: 8, mid: 7, fid: 6, name: "Цветков Иван Тимофеевич", lived: "", img: "", gender: 'male' },
 
             { id: 9, mid: -2, fid: -3, name: "Кузнецов Александр Викторович", lived: "", img: "", gender: 'male' },
-            { id: 11, mid: 25, fid: 17, name: "Грабовский Владимир Григорьевич", lived: "1.11.1955-23.05.2019", gender: 'male' },
+            { id: 11, mid: 25, fid: 17, pids:[69], name: "Грабовский Владимир Григорьевич", lived: "1.11.1955-23.05.2019", gender: 'male' },
             { id: 12, fid: 67, mid: 16, name: "Грабовский Ярослав Михайлович", lived: "07.02.2010", gender: 'male' },
             { id: 13, mid: 15, fid: 10, name: "Грабовская Евгения Кирилловна", gender: 'female' },
             { id: 14, mid: 15, fid: 10, name: "Грабовская Мария Кирилловна", gender: 'female' },
             { id: 15, pids: [10], name: "Катя", gender: 'female' },
-            { id: 16, fid: 11, pids: [67], name: "Грабовская Вера Владимировна", gender: 'female' },
+            { id: 16, mid: 69, fid: 11, pids: [67], name: "Грабовская Вера Владимировна", gender: 'female' },
             { id: 17, mid: 24, fid: 21, pids: [25, 26], name: "Грабовский Григорий Васильевич", lived: "30.04.1930-2.09.2004", gender: 'male' },
             { id: 19, pids: [18], name: "Цветков Михаил Петрович", lived: "1926-1981", gender: 'male' },
             { id: 20, mid: 18, fid: 19, pids: [-33], name: "Цветков Михаил Михайлович", lived: "", gender: 'male' },
@@ -70,7 +70,7 @@
             { id: -1, pids: [0], name: "Цветкова (Петрова) Татьяна Александровна", lived: "", img: "", gender: 'female' },
             { id: 0, fid: 19, mid: 18, pids: [-1], name: "Цветков Виктор Михайлович", lived: "27.11.1954", img: "", gender: 'male' },
 
-            { id: 10, fid: 11, pids: [15], name: "Грабовский Кирилл Владимирович", gender: 'male' },
+            { id: 10, mid:69, fid: 11, pids: [15], name: "Грабовский Кирилл Владимирович", gender: 'male' },
             { id: 6, mid: -1, fid: 0, pids: [7], name: "Цветков Тимофей Викторович", lived: "15.08.1986", img: "", gender: 'male' },
             { id: 7, pids: [6], name: "Цветкова (Ромашевская) Виктория Сергеевна", lived: "", img: "", gender: 'female' },
 
@@ -109,6 +109,7 @@
             { id: 66, pids: [65], name: "Заяц Пётр Иванович", lived: "1913-04.08.1996", gender: 'male', comment: "" },
             { id: 67, pids: [16], name: "Басурин Михаил", lived: "", gender: 'male', comment: "" },
             { id: 68, fid: 67, mid: 16, name: "Грабовская Яна Михайловна", lived: "05.01.2022", gender: 'female' },
+            { id: 69, pids:[11], name: "Грабовская Ольга Николаевна", lived: "", gender: 'female' },
         ]);
         chart.maximize(22);
     </script>
