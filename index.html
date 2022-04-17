@@ -1,0 +1,82 @@
+<!--HTML-->
+
+<body>
+    <script src="https://balkan.app/js/FamilyTree.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <div id="tree"></div>
+
+
+    <script>
+        FamilyTree.templates.myTemplate = Object.assign({}, FamilyTree.templates.tommy);
+        FamilyTree.templates.myTemplate_female = Object.assign({}, FamilyTree.templates.tommy_female);
+        FamilyTree.templates.myTemplate_male = Object.assign({}, FamilyTree.templates.tommy_male);
+        FamilyTree.templates.myTemplate_female.field_0 = '<text data-width="150" data-text-overflow="multiline"  style="font-size: 16px;" fill="#fff" x="10" y="30" text-anchor="start">{val}</text>';
+        FamilyTree.templates.myTemplate_female.field_1 = '<text data-width="230" data-text-overflow="multiline" style="font-size: 16px;" fill="#fff" x="10" y="100" text-anchor="start">{val}</text>';
+        FamilyTree.templates.myTemplate_male.field_0 = '<text data-width="150" data-text-overflow="multiline"  style="font-size: 16px;" fill="#fff" x="10" y="30" text-anchor="start">{val}</text>';
+        FamilyTree.templates.myTemplate_male.field_1 = '<text data-width="230" data-text-overflow="multiline" style="font-size: 16px;" fill="#fff" x="10" y="100" text-anchor="start">{val}</text>';
+
+        var chart = new FamilyTree(document.getElementById("tree"), {
+            miniMap: true,
+            mouseScroll: FamilyTree.action.zoom,
+            //siblingSeparation: 120,
+            subtreeSeparation: 120,
+            levelSeparation: 50,
+            //scaleInitial: FamilyTree.match.boundary,
+            orientation: FamilyTree.orientation.top,
+            scaleInitial: FamilyTree.match.boundary,
+            template: "myTemplate",
+            nodeBinding: {
+                field_0: "name",
+                field_1: "lived",
+                //        img_0: "img",
+            }
+        });
+
+        chart.load([
+            { id: -32, name: "Грабовский Макарий", lived: "", gender: 'male' },
+            { id: 2, mid: -1, fid: 0, pids: [1], name: "Цветков Алексей Викторович", lived: "15.02.1984", img: "", gender: 'male' },
+            { id: 1, mid: -2, fid: -3, pids: [2], name: "Цветкова (Кузнецова) Ирина Викторовна", lived: "18.11.1984", img: "", gender: 'female' },
+            { id: 3, mid: 1, fid: 2, name: "Цветков Кузьма Алексеевич", lived: "18.10.2014", img: "", gender: 'male' },
+            { id: 4, mid: 1, fid: 2, name: "Цветков Пётр Алексеевич", lived: "11.08.2016", img: "", gender: 'male' },
+            { id: 5, mid: 1, fid: 2, name: "Цветков Алексей Алексеевич", lived: "26.05.2019", img: "", gender: 'male' },
+
+            { id: 8, mid: 7, fid: 6, name: "Цветков Иван Тимофеевич", lived: "", img: "", gender: 'male' },
+
+            { id: 9, mid: -2, fid: -3, name: "Кузнецов Александр Викторович", lived: "", img: "", gender: 'male' },
+            { id: 11, mid: 25, fid: 17, name: "Грабовский Владимир Григорьевич", lived: "1.11.1955-23.05.2019", gender: 'male' },
+            { id: 12, mid: 16, name: "Грабовский Ярослав", gender: 'male' },
+            { id: 13, mid: 15, fid: 10, name: "Грабовская Евгения Кирилловна", gender: 'female' },
+            { id: 14, mid: 15, fid: 10, name: "Грабовская Мария Кирилловна", gender: 'female' },
+            { id: 15, pids: [10], name: "Катя", gender: 'female' },
+            { id: 16, fid: 11, name: "Грабовская Юлия Владимировна", gender: 'female' },
+            { id: 17, mid: 24, fid: 21, pids: [25, 26], name: "Грабовский Григорий Васильевич", lived: "30.04.1930-2.09.2004", gender: 'male' },
+            { id: 18, pids: [19], name: "Цветкова (Воробьева) Лидия Васильевна", lived: "", gender: 'female' },
+            { id: 19, pids: [18], name: "Цветков Михаил Петрович", lived: "1926-1981", gender: 'male' },
+            { id: 20, mid: 18, fid: 19, pids: [-33], name: "Цветков Михаил Михайлович", lived: "", gender: 'male' },
+            { id: 21, fid: -32, pids: [24], name: "Грабовский Василий Макарович", lived: "", gender: 'male' },
+            { id: 22, mid: 24, fid: 21, name: "Грабовский Сергей Васильевич", lived: "", gender: 'male' },
+            { id: 23, mid: 24, fid: 21, name: "Грабовский Борис Васильевич", lived: "", gender: 'male' },
+            { id: 24, pids: [21], name: "Грабовская Параскева", lived: "", gender: 'female' },
+            { id: 25, mid: 29, fid: 28, pids: [17], name: "Грабовская (Глидек) Вера Карловна", lived: "17.12.1933-17.02.1972", gender: 'female' },
+            { id: 26, pids: [17], name: "Грабовская (Белая) Неонила Петровна", lived: "род. 07.12.1945 или 01.01.1944", gender: 'female' },
+            { id: 27, mid: 26, name: "Михеева (Белая) Инна", lived: "", gender: 'female' },
+            { id: 28, pids: [29], name: "Глидек Карл Карлович", lived: "", gender: 'male' },
+            { id: 29, pids: [28], name: "София", lived: "", gender: 'female' },
+            { id: 30, mid: 29, fid: 28, name: "Глидек Леонид Карлович", lived: "", gender: 'male' },
+            { id: 31, mid: 29, fid: 28, name: "Глидек Ружена Карловна", lived: "", gender: 'female' },
+            { id: -33, pids: [20], name: "Ольга", lived: "", gender: 'female' },
+            { id: -34, mid: -33, fid: 20, name: "Цветкова Оксана Михайловна", lived: "", gender: 'female' },
+            { id: -3, pids: [-2], name: "Кузнецов Виктор Николаевич", lived: "", img: "", gender: 'male' },
+            { id: -2, mid: 25, fid: 17, pids: [-3], name: "Кузнецова (Грабовская) Елена Григорьевна", lived: "", img: "", gender: 'female' },
+            { id: -1, pids: [0], name: "Цветкова (Петрова) Татьяна Александровна", lived: "", img: "", gender: 'female' },
+            { id: 0, fid: 19, mid: 18, pids: [-1], name: "Цветков Виктор Михайлович", lived: "27.11.1954", img: "", gender: 'male' },
+            
+            { id: 10, fid: 11, pids: [15], name: "Грабовский Кирилл Владимирович", gender: 'male' },
+            { id: 6, mid: -1, fid: 0, pids: [7], name: "Цветков Тимофей Викторович", lived: "15.08.1986", img: "", gender: 'male' },
+            { id: 7, pids: [6], name: "Цветкова (Ромашевская) Виктория Сергеевна", lived: "", img: "", gender: 'female' },
+            
+
+        ]);
+        chart.maximize(22);
+    </script>
+</body>
